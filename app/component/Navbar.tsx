@@ -1,5 +1,3 @@
-import { Menu, X } from "lucide-react";
-
 const Navbar = () => {
   return (
     <nav className="">

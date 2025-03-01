@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import PokemonList from "./(PokemonList)/PokemonList";
 import Navbar from "./component/Navbar";
 async function getPokemonList() {

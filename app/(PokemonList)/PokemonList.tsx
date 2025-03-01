@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { HomeProps, Pokemon } from "../types/PokemonTypes";
@@ -7,7 +7,7 @@ import PokemonCard from "../component/PokemonCard";
 import SearchBar from "../component/SearchBar";
 
 export default function PokemonList({ pokemonList }: HomeProps) {
-  const [search, setSearch] = useState("");
+  const [, setSearch] = useState("");
   const [displayedPokemon, setDisplayedPokemon] = useState(pokemonList);
   const offsetRef = useRef(10);
   const [hasMore, setHasMore] = useState(true);
