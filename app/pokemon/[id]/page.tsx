@@ -55,9 +55,10 @@ export default async function PokemonDetail({ params }: any) {
   );
 }
 
-async function PokemonDetailContent({ params }: any) {
-  const pokemon = await getPokemon(params.id);
-  const species = await getPokemonSpecies(params.id);
+async function PokemonDetailContent({ params }: { params: { id: string } }) {
+  const { id } = await params; // ✅ Destructure params before using
+  const pokemon = await getPokemon(id);
+  const species = await getPokemonSpecies(id);
 
   if (!pokemon || !species) {
     return (
