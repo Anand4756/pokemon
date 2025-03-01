@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Navbar from "@/app/component/Navbar";
 import Image from "next/image";
 import { Suspense } from "react";
@@ -56,7 +57,7 @@ export default async function PokemonDetail({ params }: any) {
 }
 
 async function PokemonDetailContent({ params }: { params: { id: string } }) {
-  const { id } = await params; // ✅ Destructure params before using
+  const { id } = await params;
   const pokemon = await getPokemon(id);
   const species = await getPokemonSpecies(id);
 

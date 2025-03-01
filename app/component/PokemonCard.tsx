@@ -1,4 +1,4 @@
-// @ts-ignore
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from "react";
 import ColorThief from "colorthief";
 import { Pokemon } from "../types/PokemonTypes";
@@ -11,7 +11,7 @@ const PokemonCard = ({
   pokemon: Pokemon;
   id: string | undefined;
 }) => {
-  const [bgColor, setBgColor] = useState("white"); // Default background color
+  const [bgColor, setBgColor] = useState("white");
   const imgRef = useRef<HTMLImageElement>(null);
 
   const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
